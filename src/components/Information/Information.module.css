@@ -1,0 +1,145 @@
+.main {
+  width: 100%;
+  background-color: #000;
+  padding-bottom: 80px;
+}
+.container {
+  width: 100%;
+  height: 100%;
+}
+.container h1 {
+  margin: auto;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 72px;
+  line-height: 80px;
+  text-align: center;
+  background: -webkit-linear-gradient(0deg, #eeeeee 44.18%, #15c16a 96.06%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-top: 100px;
+}
+.container p {
+  font-style: normal;
+  font-weight: 100;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  width: 48%;
+  margin: 40px auto;
+  color: #ffffff;
+}
+.buttons {
+  width: 656px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.buttons > div {
+  width: 340px;
+  height: 56px;
+  border-radius: 40px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.buttonGreen {
+  background: linear-gradient(
+    270deg,
+    rgba(36, 224, 41, 1) 0%,
+    rgba(0, 185, 172, 1) 100%
+  );
+  cursor: pointer;
+}
+.buttonGreen:hover {
+  background: linear-gradient(
+    270deg,
+    rgba(43, 243, 47, 1) 0%,
+    rgba(12, 200, 187, 1) 100%
+  );
+}
+.buttonGreen:active {
+  background: linear-gradient(
+    270deg,
+    rgba(28, 217, 32, 1) 0%,
+    rgba(8, 182, 170, 1) 100%
+  );
+}
+.buttons .buttonGreen h3 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin: 0px 8px;
+}
+.buttonBlack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px 32px;
+
+  position: static;
+  width: 316px;
+  height: 55px;
+  left: 340px;
+  top: 0.5px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.buttonBlack:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+.buttonBlack:active {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+.buttonBlack h3 {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 23px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.buttonBlack h3:hover {
+  color: #fff;
+}
+@media screen and (max-width: 1100px) {
+  .container p {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 760px) {
+  .container h1 {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+  }
+  .container p {
+    width: 80%;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .buttons {
+    width: 100%;
+    flex-direction: column;
+  }
+  .buttons > div {
+    margin: 16px 0px;
+  }
+}
