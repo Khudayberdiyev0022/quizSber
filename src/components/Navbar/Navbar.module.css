@@ -1,7 +1,7 @@
 .main {
   width: 100%;
   background-color: #000;
-  height: 60px;
+  height: 100px;
 }
 .container {
   width: 80%;
@@ -9,16 +9,42 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  height: 100px;
 }
-.logo {
-  width: 164px;
-  background-position: center;
-  background-size: cover;
-  height: 43.28px;
+.logoCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  width: auto;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(257.44px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 27.4603px;
 }
+.logoBrand {
+  width: 130px;
+  height: 34px;
+  margin-right: 10px;
+}
+.logoStatus {
+  width: 148px;
+  height: 34px;
+  margin-left: 5px;
+}
+/* .logo > span {
+  position: absolute;
+  width: 61px;
+  height: 61px;
+  background: linear-gradient(270deg, #24E029 0%, #00B9AC 100%);
+  opacity: 0.6;
+  filter: blur(65px);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+} */
 .content {
-  width: 310px;
+  width: 368px;
   height: 32px;
   display: flex;
   justify-content: space-around;
@@ -32,6 +58,11 @@
 }
 .content a:hover {
   color: rgb(181, 181, 181);
+}
+@media screen and  (max-width: 900px) {
+  .container {
+    width: 90%;
+  }
 }
 @media screen and (max-width: 760px) {
   .main {

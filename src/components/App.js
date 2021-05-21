@@ -16,7 +16,7 @@ const App = () => {
       <Picture />
       <Question />
       <Post />
-      <Next />
+      {/* <Next /> */}
     </Fragment>
   );
 };

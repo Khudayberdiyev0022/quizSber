@@ -3,7 +3,8 @@
   min-height: 40vh;
   text-align: center;
   background-color: #000;
-  margin-top: -5px;
+  padding-top: 120px;
+  padding-bottom: 50px;
 }
 .main > h1 {
   background: -webkit-linear-gradient(0deg, #eeeeee 29.18%, #15c16a 96.06%);
@@ -103,9 +104,15 @@
 }
 
 @media screen and (max-width: 760px) {
+  .main {
+    height: 100vh;
+    padding: 0;
+    /* padding-bottom: 50px; */
+  }
   .card {
     width: 327px;
-    height: 252px;
+    /* margin-bottom: 50px; */
+    /* height: 252px; */
   }
   .main > h1 {
     font-size: 36px;
@@ -118,10 +125,11 @@
     font-size: 12px;
   }
   .main button {
-    height: 50px;
+    display: none;
+    /* height: 50px;
     width: 50px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
   }
 }

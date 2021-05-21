@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import style from "./NavbarMobile.module.css";
-import image from "../../assets/images/logo.svg";
+import image from "../../assets/images/logoBrand.svg";
+import logoStatusMobile from "../../assets/images/logoStatusMobile.svg";
 import menu from "../../assets/images/burger.svg";
 import img from "../../assets/images/buttonicon.svg";
 import close from "../../assets/images/close.svg";
@@ -15,11 +16,14 @@ const NavbarMobile = () => {
             className={style.logo}
             style={{ backgroundImage: `url(${image})` }}
           ></div>
+         <div style={{display: "flex"}}>
+         <div className={style.status}><img src={logoStatusMobile} alt="logoStatusMobile" /></div>
           <div
             onClick={() => setClick(true)}
             className={style.menu}
             style={{ backgroundImage: `url(${menu})` }}
           ></div>
+         </div>
         </div>
         {click && (
           <div className={style.invisible}>
@@ -30,6 +34,9 @@ const NavbarMobile = () => {
                 style={{ backgroundImage: `url(${close})` }}
               ></div>
               <div className={style.content}>
+              <a href="/#" onClick={() => setClick(false)}>
+                  Тест
+                </a>
                 <a href="/#" onClick={() => setClick(false)}>
                   Статьи
                 </a>
@@ -38,7 +45,7 @@ const NavbarMobile = () => {
                 </a>
               </div>
             </div>
-            <div className={style.bottom}>
+            <div className={style.bottom} style={{height: "40%"}}>
               <div className={style.buttons}>
                 <div className={style.buttonGreen}>
                   <img src={img} alt="images" width="24px" height="24px" />
