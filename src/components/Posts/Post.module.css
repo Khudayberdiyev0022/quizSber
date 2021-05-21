@@ -7,7 +7,8 @@
   padding-bottom: 50px;
 }
 .main > h1 {
-  background: -webkit-linear-gradient(0deg, #eeeeee 29.18%, #15c16a 96.06%);
+  /* background: -webkit-linear-gradient(45deg, #eeeeee 35%, #04914b 90%); */
+  background: linear-gradient(90deg, #EEEEEE 44.18%, #15C16A 96.06%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-style: normal;

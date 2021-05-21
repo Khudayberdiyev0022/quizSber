@@ -40,7 +40,9 @@
     height: 100%;
     top: 0;
     left: 0;
-    background: rgb(63, 71, 81);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(200px);
+    /* background: rgb(63, 71, 81); */
     z-index: 101;
     display: flex;
     justify-content: space-between;

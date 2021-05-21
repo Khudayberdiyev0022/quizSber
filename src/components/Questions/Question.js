@@ -12,6 +12,7 @@ import ok from "../../assets/images/Odnoklassniki.svg";
 import { questions } from "./QuestionList";
 
 const initialState = {
+  mouseHover: false,
   selected: null,
   clicked: 1,
   q1: false,
@@ -24,6 +25,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         selected: action.payload,
+      };
+    case "HOVER":
+      return {
+        ...state,
+        mouseHover: action.payload,
       };
     case "BACK":
       return {
@@ -74,6 +80,12 @@ const Question = () => {
                       onClick={() => {
                         dispatch({ type: "SELECTED", payload: question });
                       }}
+                      onMouseEnter={() =>
+                        dispatch({ type: "HOVER", payload: true })
+                      }
+                      onMouseLeave={() =>
+                        dispatch({ type: "HOVER", payload: false })
+                      }
                     >
                       <h3>{question.text}</h3>
                     </div>
@@ -105,7 +117,7 @@ const Question = () => {
           <div
             className={style.image}
             style={{
-              backgroundImage: `url(${state.selected ? img2 : img})`,
+              backgroundImage: `url(${state.mouseHover ? img2 : img})`,
             }}
           ></div>
         </div>
@@ -116,14 +128,18 @@ const Question = () => {
   const resultRender = () => {
     return (
       <div className={style.mainResult}>
-        <h1><span>результат</span> – {state.allScore} баллов</h1>
+        <h1>
+          <span>результат</span> – {state.allScore} баллов
+        </h1>
         {state.allScore >= 0 && (
           <div className={style.resultPage}>
             <div className={style.left}>
               {state.allScore < 7 && <h1>Ваша система в опасности!</h1>}
               {state.allScore <= 13 && (
                 <Fragment>
-                  {state.allScore >= 7 && <h1>Необходимо установить обновление!</h1>}
+                  {state.allScore >= 7 && (
+                    <h1>Необходимо установить обновление!</h1>
+                  )}
                 </Fragment>
               )}
               {state.allScore <= 21 && (
@@ -145,7 +161,10 @@ const Question = () => {
                 <Fragment>
                   {state.allScore >= 7 && (
                     <p>
-                      Вы знаете о правилах безопасности в сети и говорите о них с ребенком, но вам не хватает регулярности: порой, вы про них забываете, а ребенок не всегда готов делиться с вами подробностями своей интернет-жизни.
+                      Вы знаете о правилах безопасности в сети и говорите о них
+                      с ребенком, но вам не хватает регулярности: порой, вы про
+                      них забываете, а ребенок не всегда готов делиться с вами
+                      подробностями своей интернет-жизни.
                     </p>
                   )}
                 </Fragment>
@@ -154,23 +173,14 @@ const Question = () => {
                 <Fragment>
                   {state.allScore >= 14 && (
                     <p>
-                      Вы точно знаете, как обезопасить свои личные данные и говорите об этом с ребенком. Но не забывайте, что происходящее в интернете очень быстро меняется и свои знания тоже надо обновлять.
+                      Вы точно знаете, как обезопасить свои личные данные и
+                      говорите об этом с ребенком. Но не забывайте, что
+                      происходящее в интернете очень быстро меняется и свои
+                      знания тоже надо обновлять.
                     </p>
                   )}
                 </Fragment>
-                
               )}
-              <div className={style.icons}>
-                <div className={style.fb}>
-                  <img src={fb} alt="fb" />
-                </div>
-                <div className={style.vk}>
-                <img src={vk} alt="vk" />
-                </div>
-                <div className={style.ok}>
-                <img src={ok} alt="ok" />
-                </div>
-              </div>
             </div>
             <div className={style.right}>
               <div
@@ -180,6 +190,42 @@ const Question = () => {
             </div>
           </div>
         )}
+        <div
+          style={{
+            display: "flex",
+            width: "100%",
+            justifyContent: "space-beetwen",
+            alignItems: "baseline",
+          }}
+        >
+          <div style={{ width: "60%" }}>
+            <div className={style.icons}>
+              <div className={style.fb}>
+                <img src={fb} alt="fb" />
+              </div>
+              <div className={style.vk}>
+                <img src={vk} alt="vk" />
+              </div>
+              <div className={style.ok}>
+                <img src={ok} alt="ok" />
+              </div>
+            </div>
+          </div>
+          <div onclick = { () => window.reload()}
+            style={{
+              width: "30%",
+              height: "48px",
+              border: "1px solid #fff",
+              borderRadius: "100px",
+              textAlign: "center",
+              alignItems: "center",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <h3>Пройти еще раз</h3>
+          </div>
+        </div>
       </div>
     );
   };
