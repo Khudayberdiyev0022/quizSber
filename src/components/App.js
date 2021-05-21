@@ -4,7 +4,7 @@ import Information from "./Information/Information";
 import Picture from "./Information/Picture";
 import Navbar from "./Navbar/Navbar";
 import NavbarMobile from "./Navbar/NavbarMobile";
-import Next from "./Next/Next";
+// import Next from "./Next/Next";
 import Post from "./Posts/Post";
 
 const App = () => {
