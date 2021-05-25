@@ -1,0 +1,46 @@
+.bg {
+  width: 100%;
+  height: 732px;
+  /* background: #020c1b; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.bgPicturesRadial {
+  width: 100%;
+  height: 612px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 24.5%;
+}
+
+@media screen and (max-width: 1024px) {
+  .bg {
+    height: 520px;
+  }
+  .bgPicturesRadial {
+    height: 444px;
+    top: 23%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bg {
+    height: 390px;
+  }
+  .bgPicturesRadial {
+    height: 334px;
+  }
+}
+
+@media screen and (max-width: 494px) {
+  .bg {
+    height: 251px;
+  }
+  .bgPicturesRadial {
+    height: 210px;
+    top: 24.5%;
+  }
+}

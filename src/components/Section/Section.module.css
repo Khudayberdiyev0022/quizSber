@@ -1,0 +1,368 @@
+.main {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 86px;
+  background: url(../../assets/svg/bgSectionTop.svg) no-repeat;
+  background-size: cover;
+  background-position: left;
+}
+.container {
+  max-width: 1108px;
+  margin: auto;
+  /* background: url(../../assets/svg/bgSectionTop.svg) no-repeat;
+  background-size: cover; */
+}
+
+.top {
+  /* width: 100%; */
+ 
+  display: flex;
+  justify-content: space-between;
+}
+.left {
+  max-width: 526px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.small {
+  position: relative;
+  max-width: 526px;
+  height: 326px;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(300px);
+}
+.middle {
+  position: relative;
+  max-width: 526px;
+  height: 496px;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(300px);
+}
+.right {
+  position: relative;
+  height: 870px;
+  max-width: 526px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(300px);
+  border-radius: 32px;
+}
+
+.center {
+  position: relative;
+  max-width: 1108px;
+  height: 526px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(300px);
+  border-radius: 32px;
+  margin-top: 56px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom {
+  margin-top: 56px;
+  display: flex;
+  justify-content: space-between;
+}
+.image {
+  width: 382px;
+  height: 382px;
+  background-color: #fff;
+  margin: auto;
+  margin-top: 60px;
+  border-radius: 32px;
+}
+.content {
+  max-width: 526px;
+}
+.main h2 {
+  margin-top: 40px;
+  margin-left: 40px;
+  font-size: 16px;
+  font-weight: 100;
+  color: rgba(255, 255, 255, 0.6);
+}
+.main h1 {
+  margin: 40px;
+  margin-top: 20px;
+  font-size: 32px;
+  font-weight: 100;
+  color: #fff;
+}
+.center h2 {
+  margin-top: 60px;
+}
+.see {
+  position: absolute;
+  width: 446px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 40px;
+  bottom: 20px;
+  align-items: center;
+}
+.eye {
+  display: flex;
+  width: 81px;
+  height: 32px;
+  border-radius: 20px;
+  background: rgba(239, 239, 239, 0.2);
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+.eye svg {
+  margin-right: 8px;
+}
+.eye h4 {
+  font-size: 16px;
+  margin: 0px;
+  padding: 0px;
+  font-weight: 100;
+  margin-left: 10px;
+}
+.next {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid rgba(239, 239, 239);
+  cursor: pointer;
+}
+.next:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.next:active {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 816px;
+  }
+  .left {
+    max-width: 388px;
+  }
+  .small {
+    height: 240px;
+    max-width: 388px;
+  }
+  .middle {
+    max-width: 388px;
+    height: 369px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(300px);
+    border-radius: 32px;
+  }
+  .main h2 {
+    margin-top: 30px;
+    margin-left: 30px;
+    font-size: 12px;
+    font-weight: 100;
+  }
+  .main h1 {
+    margin: 30px;
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: 300;
+  }
+  .right {
+    height: 641px;
+    max-width: 388px;
+  }
+  .image {
+    height: 287px;
+    width: 292px;
+  }
+  .center {
+    max-width: 816px;
+    height: 383px;
+  }
+  .content {
+    max-width: 388px;
+  }
+  .center h2 {
+    margin-top: 60px;
+  }
+  .see {
+    width: 318px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 40px;
+    bottom: 20px;
+    align-items: center;
+  }
+  .center .image {
+    margin-top: auto;
+  }
+  .eye h4 {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .container {
+    max-width: 608px;
+  }
+  .left {
+    max-width: 292px;
+  }
+  .small {
+    height: 178px;
+    max-width: 292px;
+  }
+  .middle {
+    max-width: 292px;
+    height: 306px;
+    border-radius: 32px;
+  }
+  .main h2 {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 10px;
+    font-weight: 100;
+  }
+  .main h1 {
+    margin: 20px;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 300;
+  }
+  .right {
+    height: 508px;
+    max-width: 288px;
+  }
+  .image {
+    height: 212px;
+    width: 208px;
+    margin-top: 30px;
+  }
+  .center {
+    max-width: 608px;
+    height: 288px;
+    margin-top: 24px;
+  }
+  .bottom {
+    margin-top: 24px;
+  }
+  .center h2 {
+    margin-top: 50px;
+  }
+  .see {
+    width: 252px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 20px;
+    bottom: 5px;
+    align-items: center;
+  }
+  .center .image {
+    margin-top: auto;
+  }
+  .eye {
+    width: 58px;
+    height: 22px;
+  }
+  .eye h4 {
+    font-size: 10px;
+  }
+  .next {
+    width: 32px;
+    height: 32px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .main {
+    padding-bottom: 150px;
+  }
+  .container {
+    max-width: 327px;
+  }
+  .top {
+    flex-direction: column;
+    align-items: center;
+  }
+  .left {
+    max-width: 327px;
+  }
+  .small {
+    max-width: 327px;
+    margin: 8px 0px;
+  }
+  .middle {
+    max-width: 327px;
+    border-radius: 32px;
+    margin: 8px 0px;
+  }
+  .main h2 {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 10px;
+    font-weight: 100;
+  }
+  .main h1 {
+    /* margin: 16px; */
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 300;
+  }
+  .right {
+    max-width: 327px;
+    margin: 8px 0px;
+  }
+  .next img {
+    width: 17.5px;
+    height: 11.5px;
+  }
+  .image {
+    height: 196px;
+    width: 263px;
+    margin-top: 22px;
+  }
+  .center {
+    max-width: 327px;
+    flex-direction: column;
+    align-items: center;
+    height: 496px;
+    margin-top: 16px;
+    justify-content: initial;
+    margin-bottom: 0;
+  }
+  .bottom {
+    margin-top: 8px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .center h2 {
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+  .see {
+    width: 288px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  .center .image {
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+  .eye {
+    width: 58px;
+    height: 22px;
+  }
+  .eye h4 {
+    font-size: 11px;
+  }
+  .next {
+    width: 32px;
+    height: 32px;
+  }
+}

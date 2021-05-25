@@ -1,29 +1,28 @@
 import React from "react";
 import style from "./Navbar.module.css";
-import logoBrand from "../../assets/images/logoBrand.svg";
-import logoStatus from "../../assets/images/logoStatus.svg";
+import logoBrand from "../../assets/svg/logoBrand.svg";
+import logoStatus from "../../assets/svg/logoStatus.svg";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div className={style.main}>
       <div className={style.container}>
-        <div
-          className={style.logoCard}
-        >
+        <Link to="/">
           <div className={style.logoBrand}>
-          <img  src={logoBrand} alt="logoBrand" />
+            <img src={logoBrand} alt="logoBrand" />
           </div>
-          <div className={style.logoStatus}>
-
-          <img src={logoStatus} alt="logoStatus" />
-          </div>
-          <span></span>
-        </div>
+        </Link>
         <div className={style.content}>
-        <a href="/#">Тест</a>
-          <a href="/#">Статьи</a>
-          <a href="/#">Полезные материалы</a>
+          <a href="#test">Тест</a>
+          <a href="#article">Статьи</a>
+          <Link to="/useful">Полезные материалы</Link>
         </div>
+        <Link to="/">
+          <div className={style.logoStatus}>
+            <img src={logoStatus} alt="logoStatus" />
+          </div>
+        </Link>
       </div>
     </div>
   );

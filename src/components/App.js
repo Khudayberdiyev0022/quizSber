@@ -1,24 +1,29 @@
-import React, { Fragment } from "react";
-import Question from "./Questions/Question";
-import Information from "./Information/Information";
-import Picture from "./Information/Picture";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./Navbar/Navbar";
 import NavbarMobile from "./Navbar/NavbarMobile";
-// import Next from "./Next/Next";
-import Post from "./Posts/Post";
+import Quize from "./Quize/Quize";
+import Header from "./Header/Header";
+import HeaderPictures from "./Header/HeaderPictures";
+import Section from "./Section/Section";
 
-const App = () => {
+function App() {
   return (
-    <Fragment>
-      <Navbar />
-      <NavbarMobile />
-      <Information />
-      <Picture />
-      <Question />
-      <Post />
-      {/* <Next /> */}
-    </Fragment>
+    <div>
+      <Router>
+        <Navbar />
+        <NavbarMobile />
+        <Header />
+        <HeaderPictures />
+        <Switch>
+          <Route path="/">
+            <Quize />
+          </Route>
+        </Switch>
+        <Section />
+      </Router>
+    </div>
   );
-};
+}
 
 export default App;
