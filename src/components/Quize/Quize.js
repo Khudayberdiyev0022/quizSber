@@ -68,11 +68,11 @@ const Quize = () => {
         <h2>
           {state.clicked < 8 && state.clicked} <span>ИЗ 7 ШАГОВ</span>{" "}
         </h2>
-        <h1>
+        {/* <h1>
           {state.selected
             ? questions[state.clicked - 1][0].answer
             : questions[state.clicked - 1][0].answer}
-        </h1>
+        </h1> */}
         <h1 className={style.mobileH1}>
           {state.selected ? null : questions[state.clicked - 1][0].answer}
         </h1>
