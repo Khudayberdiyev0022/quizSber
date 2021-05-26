@@ -9,7 +9,7 @@ import Quize from "./Quize/Quize";
 
 function App() {
   return (
-    <div>
+    <div style={{ height: "400vh" }}>
       <Router>
         {/* <Navbar /> */}
         {/* <NavbarMobile /> */}
