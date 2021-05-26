@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Quize from "./Quize/Quize";
 // import Header from "./Header/Header";
 // import HeaderPictures from "./Header/HeaderPictures";
-// import Section from "./Section/Section";
+import Section from "./Section/Section";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
             <Quize />
           </Route>
         </Switch>
-        {/* <Section /> */}
+        <Section />
       </Router>
     </div>
   );
