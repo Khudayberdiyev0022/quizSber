@@ -1,0 +1,191 @@
+.main {
+  display: none;
+  max-width: 767px;
+  height: 56px;
+  background-color: rgb(2, 12, 17);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  padding: 0 24px;
+}
+.visible {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.visible .logo {
+  width: 89px;
+  height: 23.49px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.visible .menu {
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.invisible {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 101;
+  display: flex;
+  flex-direction: column;
+}
+
+.bgInvisible {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(200px);
+}
+
+.status {
+  margin-right: 15px;
+  height: 24px;
+  margin-top: 4px;
+}
+.buttons {
+  margin-top: 88px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.buttons > *:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.buttons > button {
+  width: 327px;
+  height: 55px;
+  border-radius: 40px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.buttonGreen {
+  border: none;
+  background: linear-gradient(270deg, #24e029 0%, #00b9ac 100%);
+  cursor: pointer;
+}
+.buttonGreen:hover {
+  background: linear-gradient(270deg, #2bf32f 0%, #0cc8bb 100%);
+  cursor: pointer;
+}
+.buttonGreen:active {
+  background: linear-gradient(270deg, #1cd920 0%, #08b6aa 100%);
+  cursor: pointer;
+}
+.buttons .buttonGreen a {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #fff;
+  text-decoration: none;
+}
+.buttonBlack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px 32px;
+  position: static;
+  width: 316px;
+  height: 55px;
+  left: 340px;
+  top: 0.5px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  box-sizing: border-box;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.buttonBlack:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.buttonBlack:active {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.buttonBlack a {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 23px;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+.close {
+  position: absolute;
+  top: 12px;
+  right: 24px;
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+  cursor: pointer;
+}
+.top {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.content {
+  margin-top: 94px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content > *:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.content a {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32px;
+  text-decoration: none;
+  text-align: center;
+  color: #ffffff;
+}
+
+.bottom {
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .main {
+    display: block;
+  }
+}

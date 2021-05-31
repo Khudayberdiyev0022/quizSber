@@ -1,0 +1,45 @@
+.bg {
+  margin: 94px auto 0;
+  width: 1230px;
+  height: 724px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.bg img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1439px) {
+  .bg {
+    margin-top: 74px;
+    width: 893px;
+    height: 526px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .bg {
+    margin-top: 98px;
+    width: 672px;
+    height: 395px;
+  }
+}
+
+@media (max-width: 767px) {
+  .bg {
+    position: relative;
+    margin-top: 53px;
+
+    width: 375px;
+    height: 319px;
+    overflow: hidden;
+  }
+  .bg img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 419px;
+    height: auto;
+  }
+}
